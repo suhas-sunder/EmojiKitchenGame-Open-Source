@@ -11,6 +11,17 @@ describe('NavBar Component', () => {
                 <NavBar />
             </MemoryRouter>
         ));
-        expect(screen.getByTestId('burger-icons')).toBeInTheDocument
+        expect(screen.getByTestId('burger-icons')).toBeInTheDocument;
+    });
+
+    it('toggles showMobileMenu state when burger-icons clicked', () => {
+        render((
+            <MemoryRouter>
+                <NavBar />
+            </MemoryRouter>
+        ));
+        const BurgerIcon = screen.getByTestId('burger-icons');
+        fireEvent.click(BurgerIcon);
+        expect(document.body.classList.contains("overflow-y-hidden")).toBe(true);
     });
 });
