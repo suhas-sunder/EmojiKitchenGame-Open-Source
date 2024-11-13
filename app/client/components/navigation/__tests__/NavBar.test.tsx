@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import NavBar from  '../NavBar';
 
@@ -11,5 +11,6 @@ describe('NavBar Component', () => {
                 <NavBar />
             </MemoryRouter>
         ));
+        expect(screen.getByTestId('burger-icons')).toBeInTheDocument
     });
 });
