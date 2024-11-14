@@ -9,11 +9,12 @@ export default ({ mode }: { mode: string }) => {
   const port = 3200;
 
   return defineConfig({
+    
     server: {
       port,
       hmr: {
-        protocol: 'ws',
-        host: 'localhost',
+        protocol: "ws",
+        host: "localhost",
       },
     },
     plugins: [

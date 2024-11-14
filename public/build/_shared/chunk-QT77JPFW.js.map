@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/client/components/hooks/useManageCopiedMsg.ts"],
+  "sourcesContent": ["// REMIX HMR BEGIN\nimport * as __hmr__ from \"remix:hmr\";\nif (import.meta) {\nimport.meta.hot = __hmr__.createHotContext(\n//@ts-expect-error\n\"app/client/components/hooks/useManageCopiedMsg.ts\"\n);\nimport.meta.hot.lastModified = \"1731046171308.3438\";\n}\n// REMIX HMR END\n\nimport { useEffect, useState } from \"react\";\n\nexport default function useManageCopiedMsg() {\n  const [isCopied, setIsCopied] = useState<string>(\"\");\n\n  useEffect(() => {\n    const timeout = setTimeout(() => {\n      isCopied && setIsCopied(\"\");\n    }, 400);\n\n    return () => clearTimeout(timeout);\n  }, [isCopied]);\n\n  return {\n    isCopied,\n    setIsCopied,\n  };\n}\n"],
+  "mappings": ";;;;;;;;;;;AAWA,mBAAoC;AATpC,IAAI,aAAa;AACjB,cAAY,MAAc;AAAA;AAAA,IAE1B;AAAA,EACA;AACA,cAAY,IAAI,eAAe;AAC/B;AAKe,SAAR,qBAAsC;AAC3C,QAAM,CAAC,UAAU,WAAW,QAAI,uBAAiB,EAAE;AAEnD,8BAAU,MAAM;AACd,UAAM,UAAU,WAAW,MAAM;AAC/B,kBAAY,YAAY,EAAE;AAAA,IAC5B,GAAG,GAAG;AAEN,WAAO,MAAM,aAAa,OAAO;AAAA,EACnC,GAAG,CAAC,QAAQ,CAAC;AAEb,SAAO;AAAA,IACL;AAAA,IACA;AAAA,EACF;AACF;",
+  "names": []
+}
