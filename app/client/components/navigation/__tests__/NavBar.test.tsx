@@ -60,5 +60,5 @@ describe('NavBar Component', () => {
 
         fireEvent(window, new Event("resize"));
         expect(document.body.classList.contains("overflow-y-hidden")).toBe(false);
-    })
+    });
 });
