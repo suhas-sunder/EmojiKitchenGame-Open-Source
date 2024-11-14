@@ -46,4 +46,19 @@ describe('NavBar Component', () => {
         fireEvent.click(link);
         expect(document.body.classList.contains("overflow-y-hidden")).toBe(false);
     });
+
+    it('hides the menu when the screen is resized', () => {
+        render((
+            <MemoryRouter>
+                <NavBar />
+            </MemoryRouter>
+        ));
+
+        const BurgerIcon = screen.getByTestId('burger-icons');
+        fireEvent.click(BurgerIcon);
+        expect(document.body.classList.contains("overflow-y-hidden")).toBe(true);
+
+        fireEvent(window, new Event("resize"));
+        expect(document.body.classList.contains("overflow-y-hidden")).toBe(false);
+    })
 });
