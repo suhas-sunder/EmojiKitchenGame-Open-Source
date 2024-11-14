@@ -15,6 +15,14 @@ describe('NavBar Component', () => {
         expect(screen.getByTestId('burger-icons')).toBeInTheDocument;
     });
 
+    it('checks upon initialization that the menu is hidden', () => {
+        render((<MemoryRouter>
+            <NavBar />
+        </MemoryRouter>));
+
+        expect(document.body.classList.contains("overlfow-y-hidden")).toBe(false);
+    });
+
     it('shows menu when burger-icons clicked', () => {
         render((
             <MemoryRouter>
