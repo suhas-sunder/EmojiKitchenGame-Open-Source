@@ -41,7 +41,7 @@ describe("NavBar Component", () => {
   });
 
   it("should hide the menu when a link is clicked", () => {
-    const link = screen.getByText(/Emoji Copy and Paste/i);
+    const link = screen.getByRole('link', { name : /Emoji Copy and Paste/i });
     fireEvent.click(link);
     expect(document.body.classList.contains("overflow-y-hidden")).toBe(false);
   });
