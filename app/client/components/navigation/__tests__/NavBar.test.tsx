@@ -34,13 +34,7 @@ describe("render Navbar", () => {
     it("should render the emoji copy and paste link", () => {
         expect(screen.getByRole("link", {name:  /Emoji Copy and Paste/i})).toBeInTheDocument();
     });
-
-  //Should render nav links
-
-  //Should render logo
-
-  //(when writing tests that start with "it", follow it with the word "should") If your using "test" instead of "it", then start with "if" or something along those lines.
-
+});
 
 
 //   it("should check upon initialization that the menu is hidden", () => {
@@ -67,4 +61,4 @@ describe("render Navbar", () => {
 //     fireEvent(window, new Event("resize"));
 //     expect(document.body.classList.contains("overflow-y-hidden")).toBe(false);
 //   });
-});
+
