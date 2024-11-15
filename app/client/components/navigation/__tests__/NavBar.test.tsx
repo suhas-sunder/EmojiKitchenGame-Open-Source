@@ -23,9 +23,9 @@ describe("render Navbar", () => {
         expect(screen.getByTestId("burger-icons")).toBeInTheDocument();
     });
 
-    // it("should render the Emoji Combos Link", () => {
-    //     expect(screen.getByRole("link", {name: / Emoji Combos/i})).toBeInTheDocument();
-    // });
+    it("should render the Emoji Combos Link", () => {
+        expect(screen.getByRole("link", {name: / Emoji Combos/i})).toBeInTheDocument();
+    });
 
   //Should render nav links
 
