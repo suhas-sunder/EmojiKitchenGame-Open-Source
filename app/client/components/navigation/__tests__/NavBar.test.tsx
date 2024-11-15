@@ -31,6 +31,10 @@ describe("render Navbar", () => {
         expect(screen.getByRole("link", {name: /ಥ_ಥ Text Faces/i})).toBeInTheDocument();
     });
 
+    it("should render the emoji copy and paste link", () => {
+        expect(screen.getByRole("link", {name:  /Emoji Copy and Paste/i})).toBeInTheDocument();
+    });
+
   //Should render nav links
 
   //Should render logo
