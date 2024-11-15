@@ -27,6 +27,10 @@ describe("render Navbar", () => {
         expect(screen.getByRole("link", {name: / Emoji Combos/i})).toBeInTheDocument();
     });
 
+    it("should render the text faces link", () => {
+        expect(screen.getByRole("link", {name: /ಥ_ಥ Text Faces/i})).toBeInTheDocument();
+    });
+
   //Should render nav links
 
   //Should render logo
