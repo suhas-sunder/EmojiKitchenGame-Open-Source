@@ -17,7 +17,7 @@ beforeEach(() => {
   MockNavBar();
 });
 
-describe("NavBar Component", () => {
+describe("render Navbar", () => {
   //Should render navbar (use getByRole and look for "navigation" role. Always try to use getByRole whenever possible.)
     it("should render burger icons", () => {
         expect(screen.getByTestId("burger-icons")).toBeInTheDocument();
