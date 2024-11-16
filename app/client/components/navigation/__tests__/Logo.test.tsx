@@ -16,3 +16,9 @@ const MockLogo = () => {
 beforeEach(() => {
     MockLogo()
 });
+
+describe("render Logo", () => {
+    it("", () => {
+
+    });
+});
