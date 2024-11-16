@@ -4,7 +4,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import NavBar from "../NavBar";
 
-//Mocking the render and calling it before each test prevents code from being repeated. You can pass props to the component when needed.
 const MockNavBar = () => {
   render(
     <MemoryRouter>
@@ -18,7 +17,6 @@ beforeEach(() => {
 });
 
 describe("render Navbar", () => {
-  //Should render navbar (use getByRole and look for "navigation" role. Always try to use getByRole whenever possible.)
     it("should render burger icons", () => {
         expect(screen.getByTestId("burger-icons")).toBeInTheDocument();
     });
@@ -36,6 +34,11 @@ describe("render Navbar", () => {
     });
 });
 
+describe("initializaton of navbar", () => {
+    it("should not show the menu", () => {
+        expect(document.body.classList.contains("overflow-y-hidden")).toBe(false);
+    });
+});
 
 //   it("should check upon initialization that the menu is hidden", () => {
 //     expect(document.body.classList.contains("overlfow-y-hidden")).toBe(false);
