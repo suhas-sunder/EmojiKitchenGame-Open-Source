@@ -40,9 +40,10 @@ describe("initializaton of navbar", () => {
     });
 });
 
-//   it("should check upon initialization that the menu is hidden", () => {
-//     expect(document.body.classList.contains("overlfow-y-hidden")).toBe(false);
-//   });
+describe("user interactions", () => {
+    it("", () => {})
+});
+
 
 //   it("should show menu when burger-icons clicked", () => {
 //     const BurgerIcon = screen.getByTestId("burger-icons");
