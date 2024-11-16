@@ -41,7 +41,11 @@ describe("initializaton of navbar", () => {
 });
 
 describe("user interactions", () => {
-    it("", () => {})
+    it("should show menu when burger-icon clicked", () => {
+        const BurgerIcon = screen.getByTestId("burger-icons");
+        fireEvent.click(BurgerIcon);
+        expect(document.body.classList.contains("overflow-y-hidden")).toBe(true);
+    });
 });
 
 
