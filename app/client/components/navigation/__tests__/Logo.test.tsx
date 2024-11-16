@@ -18,7 +18,7 @@ beforeEach(() => {
 });
 
 describe("render Logo", () => {
-    it("", () => {
-
+    it("should render the logo", () => {
+        expect(screen.getByTestId("logo-navigation-link")).toBeInTheDocument();
     });
 });
