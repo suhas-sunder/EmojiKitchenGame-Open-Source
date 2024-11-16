@@ -46,14 +46,13 @@ describe("user interactions", () => {
         fireEvent.click(BurgerIcon);
         expect(document.body.classList.contains("overflow-y-hidden")).toBe(true);
     });
+
+    it("should hide the menu when link is clicked", () => {
+        const link = screen.getByRole('link', {name: /Emoji Copy and Paste/i});
+        fireEvent.click(link);
+        expect(document.body.classList.contains("overlfow-y-hidden")).toBe(false);
+    });
 });
-
-
-//   it("should show menu when burger-icons clicked", () => {
-//     const BurgerIcon = screen.getByTestId("burger-icons");
-//     fireEvent.click(BurgerIcon);
-//     expect(document.body.classList.contains("overflow-y-hidden")).toBe(true);
-//   });
 
 //   it("should hide the menu when a link is clicked", () => {
 //     const link = screen.getByRole('link', { name : /Emoji Copy and Paste/i });
