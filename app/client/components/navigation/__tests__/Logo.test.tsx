@@ -4,8 +4,10 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import Logo from "../Logo";
 
+
+const setShowMobileMenu = vi.fn();
+
 const MockLogo = () => {
-    const setShowMobileMenu = vi.fn();
     render(
         <MemoryRouter>
             <Logo setShowMobileMenu={setShowMobileMenu} />
@@ -14,7 +16,8 @@ const MockLogo = () => {
 }
 
 beforeEach(() => {
-    MockLogo()
+    vi.clearAllMocks();
+    MockLogo();
 });
 
 describe("render Logo", () => {
