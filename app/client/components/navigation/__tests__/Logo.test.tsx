@@ -4,13 +4,12 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import Logo from "../Logo";
 
-
-const setShowMobileMenu = vi.fn();
+const mockSetShowMobileMenu = vi.fn();
 
 const MockLogo = () => {
     render(
         <MemoryRouter>
-            <Logo setShowMobileMenu={setShowMobileMenu} />
+            <Logo setShowMobileMenu={mockSetShowMobileMenu} />
         </MemoryRouter>
     );
 }
@@ -27,7 +26,9 @@ describe("render Logo", () => {
 });
 
 describe("user interactions with logo", () => {
-    it("", () => {
-
+    it("should call setShowMobileMenu in the false state", () => {
+        const LogoLink = screen.getByTestId("logo-navigation-link");
+        fireEvent.click(LogoLink);
+        expect(mockSetShowMobileMenu).toHaveBeenCalledWith(false);
     });
 });
