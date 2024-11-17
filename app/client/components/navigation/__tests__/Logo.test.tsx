@@ -31,4 +31,10 @@ describe("user interactions with logo", () => {
         fireEvent.click(LogoLink);
         expect(mockSetShowMobileMenu).toHaveBeenCalledWith(false);
     });
+
+    it("should change setShowMobileMenu to true state after click", () => {
+        const LogoLink = screen.getByTestId("logo-navigation-link");
+        fireEvent.click(LogoLink);
+        expect(mockSetShowMobileMenu).toHaveBeenCalledTimes(1);
+    });
 });
