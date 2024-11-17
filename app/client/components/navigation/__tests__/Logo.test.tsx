@@ -25,3 +25,9 @@ describe("render Logo", () => {
         expect(screen.getByTestId("logo-navigation-link")).toBeInTheDocument();
     });
 });
+
+describe("user interactions with logo", () => {
+    it("", () => {
+
+    });
+});
