@@ -40,5 +40,6 @@ describe("Render footer", () => {
 
     it("should render the link Terms of Service", () => {
         const FooterLink = screen.getByRole("link", {name: /Terms Of Service/i});
+        expect(FooterLink).toBeInTheDocument();
     });
 });
