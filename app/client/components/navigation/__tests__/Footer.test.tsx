@@ -27,4 +27,9 @@ describe("Render footer", () => {
         const FooterLink = screen.getByRole("link", {name: /Sitemap/i});
         expect(FooterLink).toBeInTheDocument();
     });
+
+    it("should render the link Privacy", () => {
+        const FooterLink = screen.getByRole("link", {name: /Privacy/i});
+        expect(FooterLink).toBeInTheDocument();
+    });
 });
