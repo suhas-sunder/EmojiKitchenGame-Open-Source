@@ -40,6 +40,10 @@ describe("render Logo", () => {
     expect(TitleTxt).toBeInTheDocument();
   });
   //Renders text ".com"
+  it("should render the text .com", () => {
+    const TitleTxt = screen.getByText(/.com/i);
+    expect(TitleTxt).toBeInTheDocument();
+  });
 
   //Renders a navigation link with appropriate redirect url
 });
