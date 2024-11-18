@@ -13,3 +13,7 @@ const MockFooter = () => {
 beforeEach(() => {
     MockFooter();
 });
+
+describe("Render render footer", () => {
+    it("", () => {});
+});
