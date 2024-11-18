@@ -37,4 +37,8 @@ describe("Render footer", () => {
         const FooterLink = screen.getByRole("link", {name: /Cookie/i});
         expect(FooterLink).toBeInTheDocument();
     });
+
+    it("should render the link Terms of Service", () => {
+        const FooterLink = screen.getByRole("link", {name: /Terms Of Service/i});
+    });
 });
