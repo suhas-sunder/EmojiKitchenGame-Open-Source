@@ -35,7 +35,10 @@ describe("render Logo", () => {
     expect(ImgText).toBeInTheDocument();
   });
   //Renders text "EmojiKitchenGame"
-
+  it("should render the text EmojiKitchenGame", () => {
+    const TitleTxt = screen.getByText(/EmojiKitchenGame/i);
+    expect(TitleTxt).toBeInTheDocument();
+  });
   //Renders text ".com"
 
   //Renders a navigation link with appropriate redirect url
