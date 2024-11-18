@@ -43,7 +43,7 @@ describe("render Logo", () => {
     const TitleTxt = screen.getByText(/.com/i);
     expect(TitleTxt).toBeInTheDocument();
   });
-  //Renders a navigation link with appropriate redirect url
+  
   it("should render the navigation link with redirect url", () => {
     const LinkRedirect = screen.getByRole("link", {
         name: /emojikitchengame.com/i
