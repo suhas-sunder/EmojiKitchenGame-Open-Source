@@ -53,3 +53,7 @@ describe("Render footer", () => {
         expect(FooterLink).toBeInTheDocument();
     });
 });
+
+describe("user interactions", () => {
+    it("", () => {});
+});
