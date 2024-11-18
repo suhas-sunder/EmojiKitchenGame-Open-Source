@@ -32,4 +32,9 @@ describe("Render footer", () => {
         const FooterLink = screen.getByRole("link", {name: /Privacy/i});
         expect(FooterLink).toBeInTheDocument();
     });
+
+    it("should render the link Cookie", () => {
+        const FooterLink = screen.getByRole("link", {name: /Cookie/i});
+        expect(FooterLink).toBeInTheDocument();
+    });
 });
