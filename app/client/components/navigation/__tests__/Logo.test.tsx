@@ -28,7 +28,12 @@ describe("render Logo", () => {
   });
 
   //Renders image with correct alt text
-
+  it("should render img with correct alt text", () => {
+    const ImgText = screen.getByRole("img", {
+        name: /logo depicting a chef cooking with emoji as ingredients/i
+    });
+    expect(ImgText).toBeInTheDocument();
+  });
   //Renders text "EmojiKitchenGame"
 
   //Renders text ".com"
