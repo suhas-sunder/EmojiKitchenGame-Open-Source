@@ -27,25 +27,29 @@ describe("render Logo", () => {
     expect(LogoLink).toBeInTheDocument();
   });
 
-  //Renders image with correct alt text
   it("should render img with correct alt text", () => {
     const ImgText = screen.getByRole("img", {
         name: /logo depicting a chef cooking with emoji as ingredients/i
     });
     expect(ImgText).toBeInTheDocument();
   });
-  //Renders text "EmojiKitchenGame"
+  
   it("should render the text EmojiKitchenGame", () => {
     const TitleTxt = screen.getByText(/EmojiKitchenGame/i);
     expect(TitleTxt).toBeInTheDocument();
   });
-  //Renders text ".com"
+
   it("should render the text .com", () => {
     const TitleTxt = screen.getByText(/.com/i);
     expect(TitleTxt).toBeInTheDocument();
   });
-
   //Renders a navigation link with appropriate redirect url
+  it("should render the navigation link with redirect url", () => {
+    const LinkRedirect = screen.getByRole("link", {
+        name: /emojikitchengame.com/i
+    });
+    expect(LinkRedirect).toHaveAttribute("href", "/");
+  });
 });
 
 describe("user interactions with logo", () => {
