@@ -45,13 +45,25 @@ describe("Render footer", () => {
 });
 
 describe("user interactions", async () => {
-    it("should check to see if Sitemap clicked", () => {
+    it("should check to see if Sitemap link clicked", () => {
         const FooterLink = screen.getByRole("link", {name: /Sitemap/i});
         const mockClickHandler = vi.fn();
         
         FooterLink.addEventListener("click", mockClickHandler);
         fireEvent.click(FooterLink);
         
+        expect(mockClickHandler).toHaveBeenCalledTimes(1);
+
+        FooterLink.removeEventListener("click", mockClickHandler);
+    });
+
+    it("should check to see if Privacy link clicked", () => {
+        const FooterLink = screen.getByRole("link", {name: /Cookie/i});
+        const mockClickHandler = vi.fn()
+
+        FooterLink.addEventListener("click", mockClickHandler);
+        fireEvent.click(FooterLink);
+
         expect(mockClickHandler).toHaveBeenCalledTimes(1);
 
         FooterLink.removeEventListener("click", mockClickHandler);
