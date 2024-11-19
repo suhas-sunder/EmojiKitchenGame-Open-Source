@@ -71,14 +71,14 @@ describe("user interactions", async () => {
 
     it("should check to see if Cookie link clicked", () => {
         const FooterLink = screen.getByRole("link", {name: /Cookie/i});
-        const mockHandler = vi.fn();
+        const mockClickHandler = vi.fn();
 
-        FooterLink.addEventListener("click", mockHandler);
+        FooterLink.addEventListener("click", mockClickHandler);
         fireEvent.click(FooterLink);
 
-        expect(mockHandler).toBeCalledTimes(1);
+        expect(mockClickHandler).toBeCalledTimes(1);
 
-        FooterLink.removeEventListener("click", mockHandler);
+        FooterLink.removeEventListener("click", mockClickHandler);
     });
 
     it("should check to see if Terms Of Service link clicked", () => {
