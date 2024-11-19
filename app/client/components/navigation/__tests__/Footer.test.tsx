@@ -69,7 +69,7 @@ describe("user interactions", async () => {
         FooterLink.removeEventListener("click", mockClickHandler);
     });
 
-    it("should checkt to see if Cookie link clicked", () => {
+    it("should check to see if Cookie link clicked", () => {
         const FooterLink = screen.getByRole("link", {name: /Cookie/i});
         const mockHandler = vi.fn();
 
@@ -79,5 +79,17 @@ describe("user interactions", async () => {
         expect(mockHandler).toBeCalledTimes(1);
 
         FooterLink.removeEventListener("click", mockHandler);
+    });
+
+    it("should check to see if Terms Of Service link clicked", () => {
+        const FooterLink = screen.getByRole("link", {name: /Terms Of Service/i});
+        const mockClickHandler = vi.fn();
+
+        FooterLink.addEventListener("click", mockClickHandler);
+        fireEvent.click(FooterLink);
+
+        expect(mockClickHandler).toHaveBeenCalledTimes(1);
+
+        FooterLink.removeEventListener("click", mockClickHandler);
     });
 });
