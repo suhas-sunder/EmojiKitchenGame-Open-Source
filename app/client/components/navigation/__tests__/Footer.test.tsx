@@ -56,9 +56,7 @@ describe("Render footer", () => {
         const LegalText = screen.getByText(/- All Rights Reserved./i);
         expect(LegalText).toBeInTheDocument();
     });
-});
 
-describe("user interactions", async () => {
     it("should check to see if Sitemap points to correct URL", () => {
         const FooterLink = screen.getByRole("link", {name: /Sitemap/i});
         expect(FooterLink).toHaveAttribute("href", "/sitemap");
