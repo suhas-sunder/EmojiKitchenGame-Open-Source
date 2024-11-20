@@ -60,15 +60,8 @@ describe("user interactions", async () => {
         expect(FooterLink).toHaveAttribute("href", "/cookies-policy");
     });
 
-    // it("should check to see if Terms Of Service link clicked", () => {
-    //     const FooterLink = screen.getByRole("link", {name: /Terms Of Service/i});
-    //     const mockClickHandler = vi.fn();
-
-    //     FooterLink.addEventListener("click", mockClickHandler);
-    //     fireEvent.click(FooterLink);
-
-    //     expect(mockClickHandler).toHaveBeenCalledTimes(1);
-
-    //     FooterLink.removeEventListener("click", mockClickHandler);
-    // });
+    it("should check to see if Terms Of Service link clicked", () => {
+        const FooterLink = screen.getByRole("link", {name: /Terms Of Service/i});
+        expect(FooterLink).toHaveAttribute("href", "/terms-of-service");
+    });
 });
