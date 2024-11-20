@@ -51,6 +51,11 @@ describe("Render footer", () => {
         const LegalText = screen.getByText(/© 2024/i);
         expect(LegalText).toBeInTheDocument();
     });
+
+    it("should render text - All Rights Reserved", () => {
+        const LegalText = screen.getByText(/- All Rights Reserved./i);
+        expect(LegalText).toBeInTheDocument();
+    });
 });
 
 describe("user interactions", async () => {
