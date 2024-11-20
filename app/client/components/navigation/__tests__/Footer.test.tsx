@@ -46,6 +46,11 @@ describe("Render footer", () => {
     it("should have a role of navigation", () => {
         expect(screen.getByRole("navigation")).toBeInTheDocument();
     });
+
+    it("should render the copy right symbol", () => {
+        const LegalText = screen.getByText(/© 2024/i);
+        expect(LegalText).toBeInTheDocument();
+    });
 });
 
 describe("user interactions", async () => {
