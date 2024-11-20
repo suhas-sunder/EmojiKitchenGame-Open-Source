@@ -76,4 +76,14 @@ describe("Render footer", () => {
         const FooterLink = screen.getByRole("link", {name: /Terms Of Service/i});
         expect(FooterLink).toHaveAttribute("href", "/terms-of-service");
     });
+
+    it("should render a list", () => {
+        const LegalText = screen.getByRole("list");
+        expect(LegalText).toBeInTheDocument();
+    });
+
+    it("should render a list of 4 links", () => {
+        const LegalText = screen.getAllByRole("listitem");
+        expect(LegalText).toHaveLength(4);
+    });
 });
