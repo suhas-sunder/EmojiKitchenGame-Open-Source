@@ -50,17 +50,10 @@ describe("user interactions", async () => {
         expect(FooterLink).toHaveAttribute("href", "/sitemap");
     });
 
-    // it("should check to see if Privacy link clicked", () => {
-    //     const FooterLink = screen.getByRole("link", {name: /Privacy/i});
-    //     const mockClickHandler = vi.fn()
-
-    //     FooterLink.addEventListener("click", mockClickHandler);
-    //     fireEvent.click(FooterLink);
-
-    //     expect(mockClickHandler).toHaveBeenCalledTimes(1);
-
-    //     FooterLink.removeEventListener("click", mockClickHandler);
-    // });
+    it("should check to see if Privacy link clicked", () => {
+        const FooterLink = screen.getByRole("link", {name: /Privacy/i});
+        expect(FooterLink).toHaveAttribute("href", "/privacy-policy");
+    });
 
     // it("should check to see if Cookie link clicked", () => {
     //     const FooterLink = screen.getByRole("link", {name: /Cookie/i});
