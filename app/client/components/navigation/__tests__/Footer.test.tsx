@@ -42,6 +42,10 @@ describe("Render footer", () => {
         const FooterLink = screen.getByRole("link", {name: /Terms Of Service/i});
         expect(FooterLink).toBeInTheDocument();
     });
+
+    it("should have a role of navigation", () => {
+        expect(screen.getByRole("navigation")).toBeInTheDocument();
+    });
 });
 
 describe("user interactions", async () => {
