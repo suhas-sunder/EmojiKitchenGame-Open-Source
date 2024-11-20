@@ -64,17 +64,17 @@ describe("user interactions", async () => {
         expect(FooterLink).toHaveAttribute("href", "/sitemap");
     });
 
-    it("should check to see if Privacy link clicked", () => {
+    it("should check to see if Privacy link points to correct URL", () => {
         const FooterLink = screen.getByRole("link", {name: /Privacy/i});
         expect(FooterLink).toHaveAttribute("href", "/privacy-policy");
     });
 
-    it("should check to see if Cookie link clicked", () => {
+    it("should check to see if Cookie link points to correct URL", () => {
         const FooterLink = screen.getByRole("link", {name: /Cookie/i});
         expect(FooterLink).toHaveAttribute("href", "/cookies-policy");
     });
 
-    it("should check to see if Terms Of Service link clicked", () => {
+    it("should check to see if Terms Of Service link points to correct URL", () => {
         const FooterLink = screen.getByRole("link", {name: /Terms Of Service/i});
         expect(FooterLink).toHaveAttribute("href", "/terms-of-service");
     });
