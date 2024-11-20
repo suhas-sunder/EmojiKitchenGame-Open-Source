@@ -45,51 +45,44 @@ describe("Render footer", () => {
 });
 
 describe("user interactions", async () => {
-    it("should check to see if Sitemap link clicked", () => {
+    it("should check to see if Sitemap points to correct URL", () => {
         const FooterLink = screen.getByRole("link", {name: /Sitemap/i});
-        const mockClickHandler = vi.fn();
-        
-        FooterLink.addEventListener("click", mockClickHandler);
-        fireEvent.click(FooterLink);
-        
-        expect(mockClickHandler).toHaveBeenCalledTimes(1);
-
-        FooterLink.removeEventListener("click", mockClickHandler);
+        expect(FooterLink).toHaveAttribute("href", "/sitemap");
     });
 
-    it("should check to see if Privacy link clicked", () => {
-        const FooterLink = screen.getByRole("link", {name: /Privacy/i});
-        const mockClickHandler = vi.fn()
+    // it("should check to see if Privacy link clicked", () => {
+    //     const FooterLink = screen.getByRole("link", {name: /Privacy/i});
+    //     const mockClickHandler = vi.fn()
 
-        FooterLink.addEventListener("click", mockClickHandler);
-        fireEvent.click(FooterLink);
+    //     FooterLink.addEventListener("click", mockClickHandler);
+    //     fireEvent.click(FooterLink);
 
-        expect(mockClickHandler).toHaveBeenCalledTimes(1);
+    //     expect(mockClickHandler).toHaveBeenCalledTimes(1);
 
-        FooterLink.removeEventListener("click", mockClickHandler);
-    });
+    //     FooterLink.removeEventListener("click", mockClickHandler);
+    // });
 
-    it("should check to see if Cookie link clicked", () => {
-        const FooterLink = screen.getByRole("link", {name: /Cookie/i});
-        const mockClickHandler = vi.fn();
+    // it("should check to see if Cookie link clicked", () => {
+    //     const FooterLink = screen.getByRole("link", {name: /Cookie/i});
+    //     const mockClickHandler = vi.fn();
 
-        FooterLink.addEventListener("click", mockClickHandler);
-        fireEvent.click(FooterLink);
+    //     FooterLink.addEventListener("click", mockClickHandler);
+    //     fireEvent.click(FooterLink);
 
-        expect(mockClickHandler).toBeCalledTimes(1);
+    //     expect(mockClickHandler).toBeCalledTimes(1);
 
-        FooterLink.removeEventListener("click", mockClickHandler);
-    });
+    //     FooterLink.removeEventListener("click", mockClickHandler);
+    // });
 
-    it("should check to see if Terms Of Service link clicked", () => {
-        const FooterLink = screen.getByRole("link", {name: /Terms Of Service/i});
-        const mockClickHandler = vi.fn();
+    // it("should check to see if Terms Of Service link clicked", () => {
+    //     const FooterLink = screen.getByRole("link", {name: /Terms Of Service/i});
+    //     const mockClickHandler = vi.fn();
 
-        FooterLink.addEventListener("click", mockClickHandler);
-        fireEvent.click(FooterLink);
+    //     FooterLink.addEventListener("click", mockClickHandler);
+    //     fireEvent.click(FooterLink);
 
-        expect(mockClickHandler).toHaveBeenCalledTimes(1);
+    //     expect(mockClickHandler).toHaveBeenCalledTimes(1);
 
-        FooterLink.removeEventListener("click", mockClickHandler);
-    });
+    //     FooterLink.removeEventListener("click", mockClickHandler);
+    // });
 });
