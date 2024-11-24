@@ -20,5 +20,8 @@ beforeEach(() => {
 });
 
 describe("render SectionMenu", () => {
-    it("", () => {});
+    it("should render the menu title", () => {
+        const MenuTitle = screen.getByText(/Menu/i);
+        expect(MenuTitle).toBeInTheDocument();
+    });
 });
