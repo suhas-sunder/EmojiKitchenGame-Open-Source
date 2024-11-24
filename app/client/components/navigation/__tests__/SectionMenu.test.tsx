@@ -13,3 +13,8 @@ const MockSectionMenu = () => {
         </MemoryRouter>
     );
 }
+
+beforeEach(() => {
+    vi.clearAllMocks();
+    MockSectionMenu();
+});
