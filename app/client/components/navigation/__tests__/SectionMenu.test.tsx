@@ -18,3 +18,7 @@ beforeEach(() => {
     vi.clearAllMocks();
     MockSectionMenu();
 });
+
+describe("render SectionMenu", () => {
+    it("", () => {});
+});
