@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import SectionMenu from "../SectionMenu";
 
-const props = {test: "props to the troll"};
+const props = {test: "I am the prop tester"};
 
 const MockSectionMenu = () => {
     render(
@@ -23,5 +23,10 @@ describe("render SectionMenu", () => {
     it("should render the menu title", () => {
         const MenuTitle = screen.getByText(/Menu/i);
         expect(MenuTitle).toBeInTheDocument();
+    });
+
+    it("should render the correct number of links", () => {
+        const Links = screen.getAllByRole("link");
+        expect(Links).toHaveLength(Object.keys(props).length);
     });
 });
