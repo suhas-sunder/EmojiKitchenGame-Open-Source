@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import SectionMenu from "../SectionMenu";
 
-const props = {test: "I am the prop tester"};
+const props = {"test-key": "I am the prop tester"};
 
 const MockSectionMenu = () => {
     render(
@@ -29,4 +29,11 @@ describe("render SectionMenu", () => {
         const Links = screen.getAllByRole("link");
         expect(Links).toHaveLength(Object.keys(props).length);
     });
+
+    it("should render links with correct text format", () => {
+        Object.keys(props).forEach((key) => {
+            const LinkText = screen.getByText(key.split("-").join(" "));
+            expect(LinkText).toBeInTheDocument();
+        });
+    });    
 });
