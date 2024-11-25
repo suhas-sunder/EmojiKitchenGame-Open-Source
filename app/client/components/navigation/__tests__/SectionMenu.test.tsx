@@ -35,5 +35,12 @@ describe("render SectionMenu", () => {
             const LinkText = screen.getByText(key.split("-").join(" "));
             expect(LinkText).toBeInTheDocument();
         });
-    });    
+    });
+    
+    it("should render links with correct href", () => {
+        Object.keys(props).forEach((key) => {
+            const LinkHref = screen.getByText(key.split("-").join(" "));
+            expect(LinkHref).toHaveAttribute("href", `/#${key}`)
+        });
+    });
 });
