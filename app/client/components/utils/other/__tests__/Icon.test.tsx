@@ -53,8 +53,13 @@ beforeEach(() => {
 });
 
 describe("icon rendering", () => {
-    it("should render copy icon Title", () => {
+    it("should render icon Title", () => {
         const IconTitle = screen.getByTitle(/Dummy Title/i);
         expect(IconTitle).toBeInTheDocument();
+    });
+
+    it("should render customStyle attribute", () => {
+        const iconStyle = screen.getByTestId("ContentCopyRoundedIcon").parentElement;
+        expect(iconStyle).toHaveClass("super-sonic-style");
     });
 });
