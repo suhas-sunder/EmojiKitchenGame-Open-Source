@@ -53,7 +53,7 @@ beforeEach(() => {
 });
 
 describe("icon rendering", () => {
-    it("should render copy icon info", () => {
+    it("should render copy icon Title", () => {
         const IconTitle = screen.getByTitle(/Dummy Title/i);
         expect(IconTitle).toBeInTheDocument();
     });
