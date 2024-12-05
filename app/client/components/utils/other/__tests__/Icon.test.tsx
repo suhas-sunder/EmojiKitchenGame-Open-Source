@@ -37,7 +37,7 @@ const MockIconComponents = {
 type MockIconName = keyof typeof MockIconComponents
 
 const props = {
-    title: "Fake Title",
+    title: "Dummy Title",
     customStyle: "super-sonic-style",
     icon: "copy" as MockIconName
 }
@@ -50,4 +50,10 @@ const MockIcon = () => {
 
 beforeEach(() => {
     MockIcon()
+});
+
+describe("icon rendering", () => {
+    it("", () => {
+        
+    });
 });
