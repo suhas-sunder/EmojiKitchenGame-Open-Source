@@ -61,5 +61,10 @@ describe("icon rendering", () => {
     it("should render customStyle attribute", () => {
         const iconStyle = screen.getByTestId("ContentCopyRoundedIcon").parentElement;
         expect(iconStyle).toHaveClass("super-sonic-style");
+    });    
+
+    it("should render icon attribute", () => {
+        const iconType = screen.getByTestId("ContentCopyRoundedIcon");
+        expect(iconType).hasAttribute("copy");
     });
 });
