@@ -117,7 +117,7 @@ const iconComponents = {
 };
 
 // Define the type for icon names
-type IconName = keyof typeof iconComponents;
+export type IconName = keyof typeof iconComponents;
 
 interface Props {
   title?: string;
