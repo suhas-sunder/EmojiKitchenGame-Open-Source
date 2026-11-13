@@ -25,6 +25,14 @@ describe("icon rendering", () => {
         expect(IconTitle).toBeInTheDocument();
     });
 
+    it("should not render an undefined class when customStyle is omitted", () => {
+        const { container } = render(<Icon icon="heart" />);
+        const icon = container.querySelector("i");
+
+        expect(icon).toHaveClass("min-w-5");
+        expect(icon).not.toHaveClass("undefined");
+    });
+
     it("should render customStyle attribute", () => {
         const iconStyle = screen.getByTestId("ContentCopyRoundedIcon").parentElement;
         expect(iconStyle).toHaveClass("super-sonic-style");
